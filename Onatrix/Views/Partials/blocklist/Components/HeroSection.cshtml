@@ -4,21 +4,21 @@
     var content = (ContentModels.HeroSection)Model.Content;
 }
 
-<section class="">
-    <div class="">
+<section class="relative py-[7rem]">
+    <div class="absolute inset-0">
         @if(content.HeroBgImage != null)
         {
-            <img src="@content.HeroBgImage.Url()" />
+            <img src="@content.HeroBgImage.Url()" class="w-full h-full object-cover" />
         }
     </div>
 
-    <div class="">
-        <div>
-            <h1>@content.HeroTitle</h1>
-            <p>@content.HeroText</p>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="w-5/12 flex flex-col gap-8">
+            <h1 class="text-[4.5rem] text-primary font-bold leading-none">@content.HeroTitle</h1>
+            <p class="rte">@content.HeroText</p>
             @if (content.HeroLink != null)
             {
-                <a class="" href="@content.HeroLink.Url">@content.HeroLink.Name</a>
+                <a class="bg-primary text-white py-3 px-10 no-underline rounded cursor-pointer self-start text-bold" href="@content.HeroLink.Url">@content.HeroLink.Name</a>
             }
         </div>
     </div>
