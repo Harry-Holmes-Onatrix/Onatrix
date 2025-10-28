@@ -8,6 +8,7 @@
       "Courier New", monospace;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-poppins: "poppins", sans-serif;
   }
 }
 @layer base {
@@ -165,4 +166,7 @@
   .block {
     display: block;
   }
+}
+body {
+  font-family: var(--font-poppins);
 }
