@@ -3,4 +3,48 @@
 @{
     var rootContent = Umbraco.ContentAtRoot();
     var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var logo = siteSettings?.SiteLogo;
 }
+
+<header class="relative shadow-sm z-[999]">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+
+        @if (logo != null)
+        {
+            <a href="/" class="flex-shrink-0">
+                <img src="@logo.Url()" alt="Onatrix" />
+            </a>
+        }
+        else
+        {
+            <a href="/" class="flex-shrink-0">
+                Onatrix
+            </a>
+        }
+
+        <ul class="flex items-center gap-16">
+            <li class="">
+                <a href="/about" class="font-bold text-primary hover:text-secondary transition-colors">
+                    About
+                </a>
+
+                <a href="/services" class="font-bold text-primary hover:text-secondary transition-colors">
+                    Services
+                </a>
+
+                <a href="/projects" class="font-bold text-primary hover:text-secondary transition-colors">
+                    Projects
+                </a>
+
+                <a href="/contact" class="font-bold text-primary hover:text-secondary transition-colors">
+                    Contact
+                </a>
+            </li>
+        </ul>
+
+        <div class="flex items-center">
+            <i class="fa-solid fa-magnifying-glass text-lg text-primary"></i>
+        </div>
+    </nav>
+</header>
