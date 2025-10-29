@@ -1,0 +1,45 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var address = siteSettings?.ContactAddress ?? "Ingen adress just nu, kom tillbaka snart!";
+}
+
+<div class="bg-primary">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+        <p class="text-xs text-neutral">@address</p>
+        <div class="flex">
+            @if (siteSettings?.PlatformList != null)
+            {
+                foreach (var item in siteSettings.PlatformList)
+                {
+                    if(item.Content is SocialMediaItem smItem)
+                    {
+                        switch (smItem.PlatformName!.ToLower())
+                        {
+                            case "facebook":
+                                <a href="@smItem.PlatformAccountUrl" target="_blank" class="flex items-center justify-center p-3 text-base text-neutral border-l border-main-light last:border-r">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            break;
+
+                            case "x":
+                                <a href="@smItem.PlatformAccountUrl" target="_blank" class="flex items-center justify-center p-3 text-base text-neutral border-l border-main-light last:border-r">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            break;
+
+                            case "linkedin":
+                                <a href="@smItem.PlatformAccountUrl" target="_blank" class="flex items-center justify-center p-3 text-base text-neutral border-l border-main-light last:border-r">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            break;
+                        }
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
