@@ -9,6 +9,11 @@
 <section class="py-16">
 	<div class="max-w-7xl mx-auto px-4">
 		<div class="flex flex-row justify-between">
+
+			<aside>
+				@Html.GetBlockListHtml(Model.ServiceDetailAsides)
+			</aside>
+
 			<div class="w-8/12 flex flex-col gap-2">
 				<div>
 					@Html.Raw(Model.ServiceDetailBody)
