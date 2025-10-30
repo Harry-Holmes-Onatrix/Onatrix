@@ -5,6 +5,12 @@
     var settings = Model.Settings as ContentModels.ServiceSettings;
 
     var sectionColour = settings?.ServiceBgColour?.Color ?? "#ffffff";
+
+    var current = Umbraco.AssignedContentItem;
+    var homePage = current.Root();
+
+    var servicePage = homePage.Children<ServicePage>()?.FirstOrDefault();
+    var items = servicePage?.Children<ServiceDetail>()?.OrderByDescending(x => x.CreateDate).ToList() ?? [];
 }
 
 <section>
