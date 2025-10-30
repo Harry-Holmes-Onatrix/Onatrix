@@ -10,9 +10,11 @@
 	<div class="max-w-7xl mx-auto px-4">
 		<div class="flex flex-row justify-between">
 
-			<aside>
+			<aside class="w-3/12 flex flex-col gap-4">
 				@Html.GetBlockListHtml(Model.ServiceDetailAsides)
 			</aside>
+
+			<div class="block w-px bg-border-gray"></div>
 
 			<div class="w-8/12 flex flex-col gap-2">
 				<div>

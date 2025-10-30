@@ -32,6 +32,7 @@
     --color-secondary: #D9C3A9;
     --color-body-text: #535656;
     --color-body-text-100: #999999;
+    --color-border-gray: #EAEAEA;
     --font-poppins: "poppins", sans-serif;
     --text-rte-xl: 4.375rem;
     --text-rte-lg: 2.5rem;
@@ -252,6 +253,9 @@
   .min-h-\[350px\] {
     min-height: 350px;
   }
+  .w-3\/12 {
+    width: calc(3/12 * 100%);
+  }
   .w-5\/12 {
     width: calc(5/12 * 100%);
   }
@@ -260,6 +264,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .w-px {
+    width: 1px;
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
@@ -328,6 +335,9 @@
   }
   .bg-\[\@sectionColour\] {
     background-color: @sectionColour;
+  }
+  .bg-border-gray {
+    background-color: var(--color-border-gray);
   }
   .bg-neutral {
     background-color: var(--color-neutral);
