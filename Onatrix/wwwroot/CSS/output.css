@@ -19,6 +19,7 @@
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-light: 300;
+    --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --default-transition-duration: 150ms;
@@ -409,6 +410,12 @@
   .text-\[\.875rem\] {
     font-size: .875rem;
   }
+  .text-\[0\.875rem\] {
+    font-size: 0.875rem;
+  }
+  .text-\[1\.375rem\] {
+    font-size: 1.375rem;
+  }
   .text-\[2\.5rem\] {
     font-size: 2.5rem;
   }
@@ -444,6 +451,10 @@
   .font-light {
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
