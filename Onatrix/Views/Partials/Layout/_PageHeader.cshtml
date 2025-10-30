@@ -10,9 +10,11 @@
 @{
     var selection = Model.Ancestors().ToArray();
 }
-<section>
-    <div>
-        <div>
+
+<section class="">
+    <div class="">
+        <h1 class="">@Model.PageTitle</h1>
+        <div class="">
             @if (selection?.Length > 0)
             {
                 <ul class="breadcrumb">
