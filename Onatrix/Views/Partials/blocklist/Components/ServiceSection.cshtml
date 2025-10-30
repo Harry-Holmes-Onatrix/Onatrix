@@ -13,24 +13,30 @@
     var items = servicePage?.Children<ServiceDetail>()?.OrderByDescending(x => x.CreateDate).ToList() ?? [];
 }
 
-<section>
-    <div>
-        <div>
+<section class="">
+    <div class="">
+        <div class="">
             @if (settings!.ShowServiceLabel)
             {
-                <h2>@content.ServiceLabel</h2>
+                <h2 class="">@content.ServiceLabel</h2>
             }
-            <div>@Html.Raw(content.ServiceTitle)</div>
+            <div class="">@Html.Raw(content.ServiceTitle)</div>
         </div>
 
-        <div>
-            <div>
-                <a href="#">
-                    <h4></h4>
-                    <img />
-                    <p></p>
-                </a>
-            </div>
+        <div class="">
+            @if (items.Any())
+            {
+                @foreach (var item in items)
+                {        
+                    <div class="">
+                        <a href="@item.Url()">
+                            <h4 class="">@item.Name</h4>
+                            <img src="@(item.ServiceDetailThumbnail?.Url() ?? "~/Images/service-fallback.svg")" class="" />
+                            <p class="">@item.ServiceDetailDescription</p>
+                        </a>
+                    </div>
+                }
+            }
         </div>
     </div>
 </section>
