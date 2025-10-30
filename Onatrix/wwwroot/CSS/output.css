@@ -255,6 +255,9 @@
   .w-5\/12 {
     width: calc(5/12 * 100%);
   }
+  .w-8\/12 {
+    width: calc(8/12 * 100%);
+  }
   .w-full {
     width: 100%;
   }
@@ -275,6 +278,9 @@
   }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
   }
   .items-center {
     align-items: center;
