@@ -17,8 +17,47 @@
     --color-border-400: #C7C8C9;
 
     --font-poppins: "poppins", sans-serif;
+
+    --text-primary: #4F5955;
+    --text-secondary: #D9C3A9;
+    --text-body: #535656;
+    --text-body-100: #999999;
+
+    --text-rte-xl: 4.375rem;
+    --text-rte-lg: 2.5rem;
+    --text-rte-md: 1.25rem;
+    --text-rte-sm: 1rem;
+    --text-rte-xs: 0.875rem;
 }
 
 body{
     @apply font-poppins;
+}
+
+.current a {
+    @apply text-secondary;
+}
+
+.rte h3 {
+    @apply text-[2.5rem] text-primary font-bold;
+}
+
+.rte-ul {
+    @apply list-disc pl-5 mt-3;
+}
+
+.rte-ul li {
+    @apply text-rte-xs text-body-text mb-3;
+}
+
+.rte-ul li::marker {
+    @apply text-secondary;
+}
+
+.rte p {
+    @apply mb-3;
+}
+
+img {
+    @apply w-full h-auto object-cover;
 }
