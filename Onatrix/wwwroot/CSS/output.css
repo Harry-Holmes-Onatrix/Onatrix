@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-white: #F2EDDC;
     --spacing: 0.25rem;
     --container-7xl: 80rem;
@@ -227,6 +228,9 @@
       max-width: 96rem;
     }
   }
+  .mx-2 {
+    margin-inline: calc(var(--spacing) * 2);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -317,6 +321,9 @@
   .flex-row {
     flex-direction: row;
   }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .items-center {
     align-items: center;
   }
@@ -338,6 +345,9 @@
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
+  .gap-y-5 {
+    row-gap: calc(var(--spacing) * 5);
+  }
   .self-start {
     align-self: flex-start;
   }
@@ -358,6 +368,9 @@
   .border-l {
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
+  }
+  .border-border-gray {
+    border-color: var(--color-border-gray);
   }
   .border-main-light {
     border-color: var(--color-main-light);
@@ -421,6 +434,12 @@
   }
   .py-\[7rem\] {
     padding-block: 7rem;
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
   }
   .text-center {
     text-align: center;
@@ -499,6 +518,9 @@
   }
   .text-body-text-100 {
     color: var(--color-body-text-100);
+  }
+  .text-gray-600 {
+    color: var(--color-gray-600);
   }
   .text-neutral {
     color: var(--color-neutral);
