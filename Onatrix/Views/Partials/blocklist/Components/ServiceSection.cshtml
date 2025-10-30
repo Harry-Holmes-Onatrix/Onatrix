@@ -1,5 +1,30 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
+    var content = (ContentModels.ServiceSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ServiceSettings;
+
+    var sectionColour = settings?.ServiceBgColour?.Color ?? "#ffffff";
 }
+
+<section>
+    <div>
+        <div>
+            @if (settings!.ShowServiceLabel)
+            {
+                <h2>@content.ServiceLabel</h2>
+            }
+            <div>@Html.Raw(content.ServiceTitle)</div>
+        </div>
+
+        <div>
+            <div>
+                <a href="#">
+                    <h4></h4>
+                    <img />
+                    <p></p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
