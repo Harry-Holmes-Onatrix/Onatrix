@@ -29,7 +29,9 @@
     --color-primary: #4F5955;
     --color-main-light: #606966;
     --color-secondary: #D9C3A9;
+    --color-body-text: #535656;
     --font-poppins: "poppins", sans-serif;
+    --text-rte-xs: 0.875rem;
   }
 }
 @layer base {
@@ -458,6 +460,22 @@ body {
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
+}
+.rte-ul {
+  margin-top: calc(var(--spacing) * 3);
+  list-style-type: disc;
+  padding-left: calc(var(--spacing) * 5);
+}
+.rte-ul li {
+  margin-bottom: calc(var(--spacing) * 3);
+  font-size: var(--text-rte-xs);
+  color: var(--color-body-text);
+}
+.rte-ul li::marker {
+  color: var(--color-secondary);
+}
+.rte p {
+  margin-bottom: calc(var(--spacing) * 3);
 }
 @property --tw-rotate-x {
   syntax: "*";
