@@ -3,3 +3,15 @@
 @{
     var content = (ContentModels.TeamMember)Model.Content;
 }
+
+<div>
+    @if (content.TeamMemberImage != null)
+    {
+        <img src="@content.TeamMemberImage.Url()" alt="@content.TeamMemberName"/>
+    }
+
+    <div>
+        <h4>@content.TeamMemberName</h4>
+        <p>@content.TeamMemberRole</p>
+    </div>
+</div>
