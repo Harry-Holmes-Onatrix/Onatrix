@@ -13,26 +13,26 @@
     var items = servicePage?.Children<ServiceDetail>()?.OrderByDescending(x => x.CreateDate).ToList() ?? [];
 }
 
-<section class="">
-    <div class="">
-        <div class="">
+<section class="py-[4rem] bg-[@sectionColour]">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col gap-2 items-center">
             @if (settings!.ShowServiceLabel)
             {
-                <h2 class="">@content.ServiceLabel</h2>
+                <h2 class="text-[.875rem] text-secondary font-bold uppercase">@content.ServiceLabel</h2>
             }
-            <div class="">@Html.Raw(content.ServiceTitle)</div>
+            <div class="rte">@Html.Raw(content.ServiceTitle)</div>
         </div>
 
-        <div class="">
+        <div class="my-5 grid grid-cols-3 gap-4">
             @if (items.Any())
             {
                 @foreach (var item in items)
                 {        
-                    <div class="">
-                        <a href="@item.Url()">
-                            <h4 class="">@item.Name</h4>
-                            <img src="@(item.ServiceDetailThumbnail?.Url() ?? "~/Images/service-fallback.svg")" class="" />
-                            <p class="">@item.ServiceDetailDescription</p>
+                    <div class="bg-neutral border-2 border-white-100 w-full min-h-[350px] overflow-hidden">
+                        <a href="@item.Url() class="block no-underline">
+                            <h4 class="p-[1.5rem] font-semibold text-primary">@item.Name</h4>
+                            <img src="@(item.ServiceDetailThumbnail?.Url() ?? "~/Images/service-fallback.svg")" class="block w-full h-[220px] object-cover" />
+                            <p class="text-sm p-[1.5rem]">@item.ServiceDetailDescription</p>
                         </a>
                     </div>
                 }
