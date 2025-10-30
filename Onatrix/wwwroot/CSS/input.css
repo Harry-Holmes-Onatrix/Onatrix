@@ -17,8 +17,17 @@
     --color-border-400: #C7C8C9;
 
     --font-poppins: "poppins", sans-serif;
+
+    --text-primary: #4F5955;
+    --text-secondary: #D9C3A9;
+    --text-body: #535656;
+    --text-body-100: #999999;
 }
 
 body{
     @apply font-poppins;
+}
+
+.rte h3 {
+    @apply text-[2.5rem] text-primary font-bold;
 }
