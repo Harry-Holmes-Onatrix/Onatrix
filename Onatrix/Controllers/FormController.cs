@@ -26,10 +26,11 @@ namespace Onatrix.Controllers
 
             if (!result)
             {
+                TempData["FormError"] = "Something went wrong when submitting your request. Please try again later.";
                 return RedirectToCurrentUmbracoPage();
             }
 
-
+            TempData["FormSuccess"] = "Thank you for your interest. Your request has been recieved and we will get back to you soon!";
 
             return RedirectToCurrentUmbracoPage();
         }
