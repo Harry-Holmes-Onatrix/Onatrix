@@ -23,6 +23,8 @@ namespace Onatrix.Controllers
                 return CurrentUmbracoPage();
             }
 
+
+
             return RedirectToCurrentUmbracoPage();
         }
     }
