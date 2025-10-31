@@ -4,6 +4,11 @@
 @{
     var content = (ContentModels.AboutCallbackSection)Model.Content;
     var settings = Model.Settings as ContentModels.AboutCallbackSettings;
+
+    var formVM = new CallbackFormViewModel
+            {
+                Options = settings?.CallbackRequestOptions ?? []
+            };
 }
 
 <section class="py-28">
@@ -20,7 +25,7 @@
             </div>
             <p class="text-sm py-[1.5rem] px-[2rem] italic">@content.AboutCallbackFormDescription</p>
 
-            <partial name="Partials/Forms/_CallbackForm" model="new CallbackFormViewModel()" />
+            <partial name="Partials/Forms/_CallbackForm" model="formVM" />
 
             @if (TempData["FormSuccess"] != null)
             {
