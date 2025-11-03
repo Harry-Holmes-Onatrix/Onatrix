@@ -6,4 +6,18 @@
 
 <partial name="Partials/Layout/_PageHeader" model="(IPageHeader)Model" />
 
-@Html.GetBlockListHtml(Model.Sections)
+<section>
+	<div>
+		@* About content *@
+		<div>
+			@* About Image *@
+		</div>
+
+		<div>
+			@Html.Raw(Model.AboutUsBody)
+		</div>
+	</div>
+
+
+	@Html.GetBlockListHtml(Model.Sections)
+</section>
