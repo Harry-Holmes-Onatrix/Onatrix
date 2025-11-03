@@ -6,16 +6,17 @@
 
 <partial name="Partials/Layout/_PageHeader" model="(IPageHeader)Model" />
 
-<section>
-	<div>
-		@* About content *@
-		<div>
-			<img src="@Url.Content(Model.AboutUsImage!.Url())" />
-			@Html.Raw(Model.AboutUsImageDescription)
-		</div>
+<section class="py-16">
+	<div class="max-w-7xl mx-auto px-4">
+		<div class="flex justify-between gap-10">
+			<div class="w-4/12 flex flex-col gap-2">
+				<img src="@Url.Content(Model.AboutUsImage!.Url())" class="" />
+				<p class="italic text-primary ">@Html.Raw(Model.AboutUsImageDescription)</p>
+			</div>
 
-		<div>
-			@Html.Raw(Model.AboutUsBody)
+			<div class="rte w-8/12">
+				@Html.Raw(Model.AboutUsBody)
+			</div>
 		</div>
 	</div>
 
