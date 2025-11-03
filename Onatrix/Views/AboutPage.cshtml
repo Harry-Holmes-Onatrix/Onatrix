@@ -10,7 +10,8 @@
 	<div>
 		@* About content *@
 		<div>
-			@* About Image *@
+			<img src="@Url.Content(Model.AboutUsImage!.Url())" />
+			@Html.Raw(Model.AboutUsImageDescription)
 		</div>
 
 		<div>
