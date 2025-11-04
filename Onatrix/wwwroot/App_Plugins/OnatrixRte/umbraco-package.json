@@ -212,6 +212,9 @@
       },
       "items": [
         {
+          "label": "Stars appear on the website"
+        },
+        {
           "label": "★",
           "data": {
             "tag": "div",
