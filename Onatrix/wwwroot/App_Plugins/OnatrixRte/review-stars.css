@@ -1,0 +1,20 @@
+﻿.review-stars {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.review-stars.rating-1::before {
+    content: "★"
+}
+.review-stars.rating-2::before {
+    content: "★★"
+}
+.review-stars.rating-3::before {
+    content: "★★★"
+}
+.review-stars.rating-4::before {
+    content: "★★★★"
+}
+.review-stars.rating-5::before {
+    content: "★★★★★"
+}
