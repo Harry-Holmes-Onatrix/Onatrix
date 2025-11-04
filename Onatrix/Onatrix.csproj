@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <Folder Include="Properties\PublishProfiles\" />
-    <Folder Include="wwwroot\App_Plugins\OnatrixRte\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
