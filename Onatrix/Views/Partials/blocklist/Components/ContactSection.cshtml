@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var settings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var contactAddress = settings?.ContactAddress ?? "No address available";
+    var contactPhone = settings?.ContactPhone ?? "No phone number available";
+    var contactEmail = settings?.ContactEmail ?? "No email address available";
+}
+
+<section class="pt-10">
+    <div class="max-w-7xl mx-auto px-4 flex items-center gap-8">
+        <div class="relative w-1/2 min-h-[676px]">
+            <img src="/Images/Contact-back.svg" alt="back" class="absolute w-full h-full z-0 top-2.5" />
+            <img src="/Images/Contact-top.svg" alt="top" class="absolute w-full h-full z-10 right-12" />
+        </div>
+        <div class="w-1/2 max-w-[25rem] flex flex-col gap-10">
+            <p class="text-primary font-bold text-[2.5rem]">Let us know about your next project</p>
+
+            <div class="flex gap-2">
+                <i class="fa-solid fa-location-dot pt-1 text-secondary"></i>
+                <div>
+                    <p class="text-primary font-semibold text-[.875rem]">Office location</p>
+                    <p class="text-body-text text-[.875rem]">@contactAddress</p>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <i class="fa-solid fa-phone-flip pt-1 text-secondary"></i>
+                <div>
+                    <p class="text-primary font-semibold text-[.875rem]">Phone number</p>
+                    <p class="text-body-text text-[.875rem]">@contactPhone</p>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <i class="fa-solid fa-envelope pt-1 text-secondary"></i>
+                <div>
+                    <p class="text-primary font-semibold text-[.875rem]">E-mail address</p>
+                    <p class="text-body-text text-[.875rem]">@contactEmail</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
