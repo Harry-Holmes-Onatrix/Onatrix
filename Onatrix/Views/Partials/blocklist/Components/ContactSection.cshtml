@@ -2,8 +2,6 @@
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
     var rootContent = Umbraco.ContentAtRoot();
-
-    var content = (ContentModels.ContactSection)Model.Content;
     var settings = rootContent.OfType<SiteSettings>().FirstOrDefault();
 
     var contactAddress = settings?.ContactAddress ?? "No address available";
@@ -18,12 +16,12 @@
             <img src="/Images/Contact-top.svg" alt="top" class="absolute w-full h-full z-10 right-12" />
         </div>
         <div class="w-1/2 max-w-[25rem] flex flex-col gap-10">
-            <p class="text-primary font-bold text-[2.5rem]">@content.ContactTitle</p>
+            <p class="text-primary font-bold text-[2.5rem]">Let us know about your next project</p>
 
             <div class="flex gap-2">
                 <i class="fa-solid fa-location-dot pt-1 text-secondary"></i>
                 <div>
-                    <p class="text-primary font-semibold text-[.875rem]">@content.ContactLocationTitle</p>
+                    <p class="text-primary font-semibold text-[.875rem]">Office location</p>
                     <p class="text-body-text text-[.875rem]">@contactAddress</p>
                 </div>
             </div>
@@ -31,7 +29,7 @@
             <div class="flex gap-2">
                 <i class="fa-solid fa-phone-flip pt-1 text-secondary"></i>
                 <div>
-                    <p class="text-primary font-semibold text-[.875rem]">@content.ContactPhoneTitle</p>
+                    <p class="text-primary font-semibold text-[.875rem]">Phone number</p>
                     <p class="text-body-text text-[.875rem]">@contactPhone</p>
                 </div>
             </div>
@@ -39,7 +37,7 @@
             <div class="flex gap-2">
                 <i class="fa-solid fa-envelope pt-1 text-secondary"></i>
                 <div>
-                    <p class="text-primary font-semibold text-[.875rem]">@content.ContactEmailTitle</p>
+                    <p class="text-primary font-semibold text-[.875rem]">E-mail address</p>
                     <p class="text-body-text text-[.875rem]">@contactEmail</p>
                 </div>
             </div>
