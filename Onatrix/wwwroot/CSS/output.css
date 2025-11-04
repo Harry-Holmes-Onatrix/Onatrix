@@ -512,6 +512,9 @@
   .bg-white-100 {
     background-color: var(--color-white-100);
   }
+  .\[background-image\:url\(\'\/Images\/Contact-top\.svg\'\)\,url\(\'\/Images\/Contact-mid\.svg\'\)\,url\(\'\/Images\/Contact-back\.svg\'\)\] {
+    background-image: url('/Images/Contact-top.svg'),url('/Images/Contact-mid.svg'),url('/Images/Contact-back.svg');
+  }
   .\[background-image\:url\(\'\/Images\/Rectangle-left\.svg\'\)\,url\(\'\/Images\/Rectangle-right\.svg\'\)\] {
     background-image: url('/Images/Rectangle-left.svg'),url('/Images/Rectangle-right.svg');
   }
