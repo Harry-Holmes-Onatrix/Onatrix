@@ -1,18 +1,21 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
+    var rootContent = Umbraco.ContentAtRoot();
+
     var content = (ContentModels.ContactSection)Model.Content;
-    var settings = Model.Settings as ContentModels.SiteSettings;
+    var settings = rootContent.OfType<SiteSettings>().FirstOrDefault();
 
     var contactAddress = settings?.ContactAddress ?? "No address available";
-    var contactPhone = settings?.ContactPhone ?? "No address available";
-    var contactEmail = settings?.ContactEmail ?? "No address available";
+    var contactPhone = settings?.ContactPhone ?? "No phone number available";
+    var contactEmail = settings?.ContactEmail ?? "No email address available";
 }
 
 <section class="bg-no-repeat py-16
                 [background-image:url('/Images/Contact-top.svg'),url('/Images/Contact-mid.svg'),url('/Images/Contact-back.svg')]
                 [background-position:]">
     <div class="container mx-auto px-4">
+
         <div>
             <p>@content.ContactTitle</p>
             <p>@content.ContactLocationTitle</p>
