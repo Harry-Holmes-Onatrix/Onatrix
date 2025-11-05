@@ -5,26 +5,35 @@
     var stories = content.SuccessStoryList;
 }
 
-<section>
-    <div>
-        <div>
-            <p>@content.SuccessLabel</p>
-            <h2>@content.SuccessTitle</h2>
-        </div>
+<section class="bg-primary relative min-h-[50rem]">
+    <img src="~/Images/Success-Bg.svg" class="absolute z-[0] top-23 left-1/2 -translate-x-1/2" />
+    <div class="max-w-7xl mx-auto px-4 relative z-[999] ">
+        <div class="flex flex-col items-center pt-20">
+            <div class="flex flex-col items-center">
+                <p class="text-secondary text-[.875rem] font-bold">@content.SuccessLabel</p>
+                <h2 class="text-neutral text-[2.5rem] font-bold">@content.SuccessTitle</h2>
+            </div>
 
-        <div>
-            @if (stories != null)
-            {
-                for (var i = 0; i < stories.Count; i++)
+            <div class="flex items-center justify-between gap-10">
+                @if (stories != null)
                 {
-                    var story = stories[i];
-                    <div>
-                        <partial name="Partials/BlockList/Components/SuccessItem" model="story">
-                    </div>
+                    for (var i = 0; i < stories.Count; i++)
+                    {
+                        var story = stories[i];
+                        <div class="">
+                            <partial name="Partials/BlockList/Components/SuccessItem" model="story">
+                        </div>
+                    }
                 }
-            }
-        </div>
+            </div>
 
-        <img src="@content.SuccessImage.Url()"/>
+        </div>
     </div>
 </section>
+
+@if (content.SuccessImage != null)
+{
+    <div class="flex justify-center -mt-90 relative">
+        <img src="@content.SuccessImage.Url()" />
+    </div>
+}

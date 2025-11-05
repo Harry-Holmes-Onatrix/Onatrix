@@ -46,7 +46,6 @@
     --color-body-text-100: #999999;
     --color-border-gray: #EAEAEA;
     --font-poppins: "poppins", sans-serif;
-    --text-body: #535656;
     --text-body-100: #999999;
     --text-rte-xl: 4.375rem;
     --text-rte-lg: 2.5rem;
@@ -233,8 +232,29 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
   .top-2\.5 {
     top: calc(var(--spacing) * 2.5);
+  }
+  .top-10 {
+    top: calc(var(--spacing) * 10);
+  }
+  .top-20 {
+    top: calc(var(--spacing) * 20);
+  }
+  .top-23 {
+    top: calc(var(--spacing) * 23);
+  }
+  .top-25 {
+    top: calc(var(--spacing) * 25);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .right-1\/2 {
+    right: calc(1/2 * 100%);
   }
   .right-3 {
     right: calc(var(--spacing) * 3);
@@ -242,11 +262,17 @@
   .right-12 {
     right: calc(var(--spacing) * 12);
   }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
+  }
   .z-0 {
     z-index: 0;
   }
   .z-10 {
     z-index: 10;
+  }
+  .z-\[0\] {
+    z-index: 0;
   }
   .z-\[99\] {
     z-index: 99;
@@ -284,8 +310,23 @@
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
+  .-mt-32 {
+    margin-top: calc(var(--spacing) * -32);
+  }
+  .-mt-50 {
+    margin-top: calc(var(--spacing) * -50);
+  }
+  .-mt-90 {
+    margin-top: calc(var(--spacing) * -90);
+  }
+  .-mt-100 {
+    margin-top: calc(var(--spacing) * -100);
+  }
   .-mt-\[11rem\] {
     margin-top: calc(11rem * -1);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
   }
   .mt-auto {
     margin-top: auto;
@@ -295,6 +336,9 @@
   }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-50 {
+    margin-bottom: calc(var(--spacing) * 50);
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
@@ -319,6 +363,9 @@
   }
   .h-full {
     height: 100%;
+  }
+  .min-h-\[50rem\] {
+    min-height: 50rem;
   }
   .min-h-\[350px\] {
     min-height: 350px;
@@ -365,20 +412,27 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
-  .max-w-\[22rem\] {
-    max-width: 22rem;
+  .max-w-\[10rem\] {
+    max-width: 10rem;
+  }
+  .max-w-\[15rem\] {
+    max-width: 15rem;
+  }
+  .max-w-\[20rem\] {
+    max-width: 20rem;
   }
   .max-w-\[25rem\] {
     max-width: 25rem;
-  }
-  .max-w-\[30rem\] {
-    max-width: 30rem;
   }
   .max-w-\[40rem\] {
     max-width: 40rem;
   }
   .flex-shrink-0 {
     flex-shrink: 0;
+  }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -427,12 +481,6 @@
   }
   .gap-16 {
     gap: calc(var(--spacing) * 16);
-  }
-  .gap-20 {
-    gap: calc(var(--spacing) * 20);
-  }
-  .gap-120 {
-    gap: calc(var(--spacing) * 120);
   }
   .gap-y-5 {
     row-gap: calc(var(--spacing) * 5);
@@ -560,6 +608,12 @@
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
   }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
+  .pt-\[4rem\] {
+    padding-top: 4rem;
+  }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
   }
@@ -597,6 +651,9 @@
   .text-\[0\.875rem\] {
     font-size: 0.875rem;
   }
+  .text-\[1\.125rem\] {
+    font-size: 1.125rem;
+  }
   .text-\[1\.375rem\] {
     font-size: 1.375rem;
   }
@@ -608,6 +665,9 @@
   }
   .text-\[4\.5rem\] {
     font-size: 4.5rem;
+  }
+  .text-\[6\.25rem\] {
+    font-size: 6.25rem;
   }
   .text-\[10px\] {
     font-size: 10px;
@@ -797,6 +857,21 @@ body {
 .rte p {
   margin-bottom: calc(var(--spacing) * 3);
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -951,6 +1026,9 @@ body {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
