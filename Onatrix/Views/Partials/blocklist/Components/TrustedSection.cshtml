@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.TrustedSection)Model.Content;
+}
+
+<section>
+    <div>
+        <div>
+            @Html.Raw(content.TrustedBody)
+        </div>
+
+        @if (content.TrustedLink != null)
+        {
+            <a href="@content.TrustedLink.Url">@content.TrustedLink.Name</a>
+        }
+
+        @if (content.TrustedImage != null)
+        {
+            <img src="@content.TrustedImage.Url()" />
+        }
+    </div>
+</section>
