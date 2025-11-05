@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessSection)Model.Content;
+    var stories = content.SuccessStoryList;
+}
+
+<section>
+    <div>
+        <div>
+            <p>@content.SuccessLabel</p>
+            <h2>@content.SuccessTitle</h2>
+        </div>
+
+        <div>
+            @if (stories != null)
+            {
+                @* for (var i = 0; i < stories.Count; i++)
+                {
+                    <div>
+                        <partial name="Partials/BlockList/Components/SuccessItem" />
+                    </div>
+                } *@
+            }
+        </div>
+
+        <img src="@content.SuccessImage"/>
+    </div>
+</section>
