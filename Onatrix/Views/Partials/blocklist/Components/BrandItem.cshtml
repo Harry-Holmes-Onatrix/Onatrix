@@ -4,9 +4,7 @@
     var content = (ContentModels.BrandItem)Model.Content;
 }
 
-<div class="flex">
-    @if (content.BrandLogo != null)
-    {
-        <img src="@content.BrandLogo.Url()" alt="@content.BrandName" />
-    }
-</div>
+@if (content.BrandLogo != null)
+{
+    <img src="@content.BrandLogo.Url()" alt="@content.BrandName" />
+}

@@ -7,20 +7,20 @@
     var brandList = siteSettings?.BrandList;
 }
 
-<div>
-    <div>
-        <div>
+<section class="py-[4rem]">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between">
             @if (brandList != null)
             {
                 for (var i = 0; i < brandList.Count; i++)
                 {
                     var brand = brandList[i];
 
-                    <div>
+                    <div class="">
                         <partial name="Partials/BlockList/Components/BrandItem" model="brand" />
                     </div>
                 }
             }
         </div>
     </div>
-</div>
+</section>
