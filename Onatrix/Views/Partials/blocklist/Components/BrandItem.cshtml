@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.BrandItem)Model.Content;
+}
+
+@if (content.BrandLogo != null)
+{
+    <img src="@content.BrandLogo.Url()" alt="@content.BrandName" />
+}

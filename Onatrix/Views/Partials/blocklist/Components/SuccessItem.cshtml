@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessItem)Model.Content;
+}
+
+<div class="flex flex-col items-center max-w-[20rem] text-center">
+    <h2 class="text-secondary text-[6.25rem] font-semibold">@content.SuccessItemNumber</h2>
+    <p class="text-neutral text-[1.125rem] font-semibold">@content.SuccessItemDescription</p>
+</div>
