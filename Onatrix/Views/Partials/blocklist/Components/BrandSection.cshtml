@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var brandList = siteSettings?.BrandList;
+}
+
+<section class="py-[4rem]">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between">
+            @if (brandList != null)
+            {
+                for (var i = 0; i < brandList.Count; i++)
+                {
+                    var brand = brandList[i];
+
+                    <div class="">
+                        <partial name="Partials/BlockList/Components/BrandItem" model="brand" />
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
