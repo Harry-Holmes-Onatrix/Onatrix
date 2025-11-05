@@ -17,13 +17,14 @@
             {
                 for (var i = 0; i < stories.Count; i++)
                 {
+                    var story = stories[i];
                     <div>
-                        <partial name="Partials/BlockList/Components/SuccessItem">
+                        <partial name="Partials/BlockList/Components/SuccessItem" model="story">
                     </div>
                 }
             }
         </div>
 
-        <img src="@content.SuccessImage"/>
+        <img src="@content.SuccessImage.Url()"/>
     </div>
 </section>
