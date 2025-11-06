@@ -1,5 +1,17 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@using Onatrix.ViewModels
+@model OnlineSupportViewModel
+
+@using (Html.BeginUmbracoForm("HandleOnlineSupportRequest", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "supportForm" }))
+{
+    <div>
+        <div>
+            <label asp-for="Email" class="sr-only"></label>
+            <input asp-for="Email" type="text" placeholder="@Html.DisplayNameFor(x => x.Email)" />
+            <span asp-validation-for="Email"></span>
+        </div>
+
+        <div>
+            <button type="submit"><i class="fa-regular fa-envelope"></i></button>
+        </div>
+    </div>
 }

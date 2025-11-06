@@ -8,4 +8,12 @@
     var formVM = new OnlineSupportViewModel();
 }
 
-<partial name="Partials/Forms/_OnlineSupportForm" model="formVM" />
+<section>
+    <div>
+        <div>
+            <p>@content.OnlineSupportTitle</p>
+            <p>@content.OnlineSupportBody</p>
+            <partial name="Partials/Forms/_OnlineSupportForm" model="formVM" />
+        </div>
+    </div>
+</section>
