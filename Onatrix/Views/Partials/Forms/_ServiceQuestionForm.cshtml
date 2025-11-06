@@ -1,5 +1,29 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using Onatrix.ViewModels
+@model ServiceQuestionViewModel
+
+
+<div>
+    <div>
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name" placeholder="@Html.DisplayNameFor(x => x.Name)"/>
+            <span asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" placeholder="@Html.DisplayNameFor(x => x.Email)" />
+            <span asp-validation-for="Email"></span>
+        </div>
+    </div>
+
+    <div>
+        <label asp-for="Question"></label>
+        <input asp-for="Question" placeholder="@Html.DisplayNameFor(x => x.Question)" />
+        <span asp-validation-for="Question"></span>
+    </div>
+
+    <div class="">
+        <button type="submit" class="">Submit</button>
+    </div>
+</div>
