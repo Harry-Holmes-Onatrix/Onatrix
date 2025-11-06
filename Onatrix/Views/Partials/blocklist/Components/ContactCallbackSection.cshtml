@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Onatrix.ViewModels
+
+@{
+    var content = (ContentModels.ContactCallbackSection)Model.Content;
+    var settings = Model.Settings as ContentModels.AboutCallbackSettings;
+
+    var formVM = new CallbackFormViewModel
+    {
+        Options = settings?.CallbackRequestOptions ?? []
+    };
+}
+
+<section>
+    <img />
+    <div>
+        <p></p>
+        <h1></h1>
+        <p></p>
+        <partial name="Partials/Forms/_ContactCallbackForm" model="formVM" />
+    </div>
+</section>
