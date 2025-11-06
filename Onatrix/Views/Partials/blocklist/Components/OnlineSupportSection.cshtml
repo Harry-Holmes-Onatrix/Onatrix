@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Onatrix.ViewModels
+
+
+@{
+    var content = (ContentModels.OnlineSupportSection)Model.Content;
+    var formVM = new OnlineSupportViewModel();
+}
+
+<partial name="Partials/Forms/_OnlineSupportForm" model="formVM" />
