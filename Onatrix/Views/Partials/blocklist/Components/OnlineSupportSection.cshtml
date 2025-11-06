@@ -8,11 +8,12 @@
     var formVM = new OnlineSupportViewModel();
 }
 
-<section>
-    <div>
-        <div>
-            <p>@content.OnlineSupportTitle</p>
-            <p>@content.OnlineSupportBody</p>
+<section class="bg-primary rounded-md relative">
+    <div class="flex flex-col items-center justify-center">
+        <img src="/Images/bg-mail-aside.svg" class="absolute bottom-0 right-0 z-0"/>
+        <div class="flex flex-col px-6 py-4 gap-4 relative z-10">
+            <p class="text-accent text-[1.375rem] font-semibold mx-auto">@content.OnlineSupportTitle</p>
+            <p class="text-neutral text-[.875rem]">@content.OnlineSupportBody</p>
             <partial name="Partials/Forms/_OnlineSupportForm" model="formVM" />
         </div>
     </div>
