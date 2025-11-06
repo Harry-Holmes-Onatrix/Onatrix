@@ -7,10 +7,12 @@
     var formVM = new ServiceQuestionViewModel();
 }
 
-<section>
-    <div>
-        <p>@content.ServiceQuestionTitle</p>
+<section class="py-[4rem]">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col justify-center gap-10">
+            <p class="text-primary text-[1.5rem] font-bold">@content.ServiceQuestionTitle</p>
 
-        <partial name="Partials/Forms/_ServiceQuestionForm" model="formVM" />
+            <partial name="Partials/Forms/_ServiceQuestionForm" model="formVM" />
+        </div>
     </div>
 </section>
