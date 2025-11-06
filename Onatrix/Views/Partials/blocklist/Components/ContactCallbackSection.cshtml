@@ -12,15 +12,19 @@
     };
 }
 
-<section>
+<section class="relative mb-20">
     @if (content.ContactCallbackBackgroundImage != null)
     {
-        <img src="@content.ContactCallbackBackgroundImage.Url()" />
+        <img src="@content.ContactCallbackBackgroundImage.Url()" class="z-0" />
     }
-    <div>
-        <p>@content.ContactCallbackLabel</p>
-        <h1>@content.ContactCallbackTitle</h1>
-        <p>@content.ContactCallbackBody</p>
-        <partial name="Partials/Forms/_ContactCallbackForm" model="formVM" />
+    <div class="absolute z-10 h-[35rem] w-[73rem] rounded bg-neutral -bottom-26 left-1/2 -translate-x-1/2 shadow-md">
+        <div class="flex flex-col items-center justify-center gap-5 pt-20">
+            <p class="text-[.875rem] text-secondary font-bold">@content.ContactCallbackLabel</p>
+            <h1 class="text-[2.5rem] text-primary font-bold">@content.ContactCallbackTitle</h1>
+            <div class="rte max-w-[40rem]">
+                @Html.Raw(content.ContactCallbackBody)
+            </div>
+            <partial name="Partials/Forms/_ContactCallbackForm" model="formVM" />
+        </div>
     </div>
 </section>
