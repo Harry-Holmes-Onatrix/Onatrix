@@ -1,0 +1,31 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Onatrix.ViewModels
+
+@{
+    var content = (ContentModels.ServiceQuestionSection)Model.Content;
+    var formVM = new ServiceQuestionViewModel();
+}
+
+<section class="py-[4rem]">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col justify-center gap-10">
+            <p class="text-primary text-[1.5rem] font-bold">@content.ServiceQuestionTitle</p>
+
+            <partial name="Partials/Forms/_ServiceQuestionForm" model="formVM" />
+
+            @if (TempData["FormSuccess"] != null)
+            {
+                <div class="bg-green-50 text-green-700 p-4 mx-[2rem] mb-4 rounded-md">
+                    @TempData["FormSuccess"]
+                </div>
+            }
+            else if (TempData["FormError"] != null)
+            {
+                <div class="bg-red-50 text-red-700 p-4 mx-[2rem] mb-4 rounded-md">
+                    @TempData["FormError"]
+                </div>
+            }
+        </div>
+    </div>
+</section>
