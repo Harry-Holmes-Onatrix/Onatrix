@@ -67,8 +67,8 @@ public class FormSubmissionsService(IContentService contentService)
             if(container == null)
                 return false;
 
-            var requestName = $"Online Support Request - {DateTime.Now:yyyy-MM-dd HH:mm} - {model.Email}";
-            var request = _contentService.Create(requestName, container, "onlineSupportRequest");
+            var requestName = $"Support - {DateTime.Now:yyyy-MM-dd HH:mm} - {model.Email}";
+            var request = _contentService.Create(requestName, container, "onlineSupport");
 
             request.SetValue("onlineSupportEmail", model.Email);
 
