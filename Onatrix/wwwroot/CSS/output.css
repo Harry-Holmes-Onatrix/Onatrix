@@ -331,6 +331,9 @@
   .h-\[2rem\] {
     height: 2rem;
   }
+  .h-\[10rem\] {
+    height: 10rem;
+  }
   .h-\[35rem\] {
     height: 35rem;
   }
@@ -402,6 +405,12 @@
   }
   .max-w-\[40rem\] {
     max-width: 40rem;
+  }
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
+  }
+  .flex-1 {
+    flex: 1;
   }
   .flex-shrink-0 {
     flex-shrink: 0;
@@ -630,6 +639,9 @@
   .text-\[0\.875rem\] {
     font-size: 0.875rem;
   }
+  .text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
   .text-\[1\.125rem\] {
     font-size: 1.125rem;
   }
@@ -792,6 +804,19 @@
 }
 .contact-form-btn {
   margin-inline: auto;
+  display: flex;
+  height: 3.4rem;
+  width: 10rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  background-color: var(--color-primary);
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+.service-form-btn {
   display: flex;
   height: 3.4rem;
   width: 10rem;
