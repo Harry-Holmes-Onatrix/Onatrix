@@ -1,29 +1,31 @@
 ﻿@using Onatrix.ViewModels
 @model ServiceQuestionViewModel
 
+@using (Html.BeginUmbracoForm("HandleServiceQuestionForm", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "callbackForm" }))
+{    
+    <div class="flex flex-col gap-6">
+        <div class="flex w-full items-center gap-6">
+            <div class="flex-1 min-w-0">
+                <label asp-for="Name" class="sr-only"></label>
+                <input asp-for="Name" placeholder="@Html.DisplayNameFor(x => x.Name)" class="w-full p-3 italic border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" />
+                <span asp-validation-for="Name"></span>
+            </div>
 
-<div class="flex flex-col gap-6">
-    <div class="flex w-full items-center gap-6">
-        <div class="flex-1 min-w-0">
-            <label asp-for="Name" class="sr-only"></label>
-            <input asp-for="Name" placeholder="@Html.DisplayNameFor(x => x.Name)" class="w-full p-3 italic border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" />
-            <span asp-validation-for="Name"></span>
+            <div class="flex-1 min-w-0">
+                <label asp-for="Email" class="sr-only"></label>
+                <input asp-for="Email" placeholder="@Html.DisplayNameFor(x => x.Email)" class="w-full p-3 italic border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" />
+                <span asp-validation-for="Email"></span>
+            </div>
         </div>
 
-        <div class="flex-1 min-w-0">
-            <label asp-for="Email" class="sr-only"></label>
-            <input asp-for="Email" placeholder="@Html.DisplayNameFor(x => x.Email)" class="w-full p-3 italic border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none" />
-            <span asp-validation-for="Email"></span>
+        <div>
+            <label asp-for="Question" class="sr-only"></label>
+            <textarea asp-for="Question" placeholder="@Html.DisplayNameFor(x => x.Question)" class="w-full h-[10rem] p-3 border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
+            <span asp-validation-for="Question"></span>
+        </div>
+
+        <div>
+            <button type="submit" class="service-form-btn">Submit</button>
         </div>
     </div>
-
-    <div class="">
-        <label asp-for="Question" class="sr-only"></label>
-        <textarea asp-for="Question" placeholder="@Html.DisplayNameFor(x => x.Question)" class="w-full h-[10rem] p-3 italic border border-gray-300 focus:ring-2 focus:ring-primary focus:outline-none"></textarea>
-        <span asp-validation-for="Question"></span>
-    </div>
-
-    <div class="">
-        <button type="submit" class="service-form-btn">Submit</button>
-    </div>
-</div>
+}
