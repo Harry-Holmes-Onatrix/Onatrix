@@ -13,11 +13,14 @@
 }
 
 <section>
-    <img />
+    @if (content.ContactCallbackBackgroundImage != null)
+    {
+        <img src="@content.ContactCallbackBackgroundImage.Url()" />
+    }
     <div>
-        <p></p>
-        <h1></h1>
-        <p></p>
+        <p>@content.ContactCallbackLabel</p>
+        <h1>@content.ContactCallbackTitle</h1>
+        <p>@content.ContactCallbackBody</p>
         <partial name="Partials/Forms/_ContactCallbackForm" model="formVM" />
     </div>
 </section>
