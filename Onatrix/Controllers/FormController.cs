@@ -26,11 +26,11 @@ namespace Onatrix.Controllers
 
             if (!result)
             {
-                TempData["FormError"] = "Something went wrong when submitting your request. Please try again later.";
+                TempData["CallbackFormError"] = "Something went wrong when submitting your request. Please try again later.";
                 return RedirectToCurrentUmbracoPage();
             }
 
-            TempData["FormSuccess"] = "Thank you for your interest. Your request has been recieved and we will get back to you soon!";
+            TempData["CallbackFormSuccess"] = "Thank you for your interest. Your request has been recieved and we will get back to you soon!";
 
             return RedirectToCurrentUmbracoPage();
         }
@@ -46,11 +46,11 @@ namespace Onatrix.Controllers
 
             if (!result)
             {
-                TempData["FormError"] = "Something went wrong when submitting your question. Please try again later.";
+                TempData["QuestionFormError"] = "Something went wrong when submitting your question. Please try again later.";
                 return RedirectToCurrentUmbracoPage();
             }
 
-            TempData["FormSuccess"] = "Thank you for your question. We will get back to you soon!";
+            TempData["QuestionFormSuccess"] = "Thank you for your question. We will get back to you soon!";
 
             return RedirectToCurrentUmbracoPage();
         }
@@ -66,11 +66,11 @@ namespace Onatrix.Controllers
 
             if (!result)
             {
-                TempData["FormError"] = "Something went wrong when submitting your request. Please try again later.";
+                TempData["SupportFormError"] = "Something went wrong when submitting your request. Please try again later.";
                 return RedirectToCurrentUmbracoPage();
             }
 
-            TempData["FormSuccess"] = "Thank you for your interest. Your request has been recieved and we will get back to you soon!";
+            TempData["SupportFormSuccess"] = "Thank you for your interest. Your request has been recieved and we will get back to you soon!";
 
             return RedirectToCurrentUmbracoPage();
         }
