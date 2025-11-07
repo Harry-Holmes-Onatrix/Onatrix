@@ -11,7 +11,7 @@ public class FormSubmissionsService(IContentService contentService)
     {
         try
         {
-            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "formSubmissions");
+            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "callbackSubmissions");
 
             if (container == null)
                 return false;
@@ -37,7 +37,7 @@ public class FormSubmissionsService(IContentService contentService)
     {
         try
         {
-            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "formSubmissions");
+            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "questionSubmissions");
 
             if (container == null)
                 return false;
@@ -62,7 +62,7 @@ public class FormSubmissionsService(IContentService contentService)
     {
         try
         {
-            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "formSubmissions");
+            var container = _contentService.GetRootContent().FirstOrDefault(c => c.ContentType.Alias == "supportSubmissions");
 
             if(container == null)
                 return false;
