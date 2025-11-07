@@ -56,5 +56,13 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("constructionBody")]
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ConstructionBody => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "constructionBody");
+
+		///<summary>
+		/// construction Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("constructionLink")]
+		public virtual global::Umbraco.Cms.Core.Models.Link ConstructionLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "constructionLink");
 	}
 }
